@@ -7,13 +7,13 @@
       <Searchbar v-on:inputChanged="searchPokemon"/>
     </b-row>
     <b-row align-h="center">
-      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="pokemon-card" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="pokemon-card" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="pokemon-card" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="pokemon-card" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
     </b-row>
   </b-container>
@@ -24,6 +24,10 @@
   display: flex;
   flex-direction: column;
 
+}
+
+.pokemon-card {
+  margin: 20px;
 }
 </style>
 
