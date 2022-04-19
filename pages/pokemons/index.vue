@@ -1,23 +1,31 @@
 <template>
-  <b-container>
+  <b-container class="test">
     <b-row align-h="center">
       <h1>All pokemons here</h1>
     </b-row>
-    <b-row align-h="center">
+    <b-row align-h="center" class="mb-4">
       <Searchbar v-on:inputChanged="searchPokemon"/>
     </b-row>
     <b-row align-h="center">
-      <PokemonCard :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
-      <PokemonCard :name="name" :index="index" :type="type" :sprite="sprite"
+      <PokemonCard class="m-2" :name="name" :index="index" :type="type" :sprite="sprite"
       :stats="stats"/>
     </b-row>
   </b-container>
 </template>
+
+<style>
+.test {
+  display: flex;
+  flex-direction: column;
+
+}
+</style>
 
 <script>
 import axios from 'axios'
