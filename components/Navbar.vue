@@ -5,20 +5,16 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <NuxtLink to="/">
+          <b-navbar-nav class="my-navbar">
+            <NuxtLink to="/" class="my-links">
               <MyPokedexLogo/>
             </NuxtLink>
-            <b-nav-item href="#">
-              <NuxtLink to="/pokemons">
+            <NuxtLink to="/pokemons" class="my-links">
                 Pokemons
-              </NuxtLink>
-            </b-nav-item>
-            <b-nav-item href="#">
-              <NuxtLink to="/abilities">
+            </NuxtLink>
+            <NuxtLink to="/abilities" class="my-links">
                 Abilities
-              </NuxtLink>
-            </b-nav-item>
+            </NuxtLink>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -27,5 +23,20 @@
 </template>
 
 
-<script>
-</script>
+<style>
+.my-navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my-links {
+  margin-right: 10%;
+  color: grey;
+}
+
+.my-links:hover {
+  color: grey;
+  text-decoration: none;
+}
+</style>

@@ -1,15 +1,15 @@
 <template>
   <div class="card text-center" style="width: 18rem;">
-    <img class="card-img-top mx-auto pokemon-img" :src="sprite" alt="Card image cap">
+    <img class="card-img-top mx-auto pokemon-img" :src="pokemon.sprite" alt="Card image cap">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
         <div class="firstline">
-          <h5 class="text-capitalize card-title">{{ name }}</h5>
-          <h5 class="card-title">#{{ index }}</h5>
+          <h5 class="text-capitalize card-title">{{ pokemon.name }}</h5>
+          <h5 class="card-title">#{{ pokemon.index }}</h5>
         </div>
         <div class="secondline">
           <div class="row justify-content-around">
-            <div class="card" v-for="element in type" :style="types.find((e) => e.name === element).color">
+            <div class="card" v-for="element in pokemon.type" :style="types.find((e) => e.name === element).color">
               <span class="font-weight-bold typetext">
                 {{ element.toUpperCase() }}
               </span>
@@ -21,27 +21,27 @@
         <div class="row justify-content-between">
           <div class="column">
             <div> HP </div>
-            <div> {{ stats.hp }} </div>
+            <div> {{ pokemon.stats.hp }} </div>
           </div>
           <div class="column">
             <div> ATK </div>
-            <div> {{ stats.atk }} </div>
+            <div> {{ pokemon.stats.atk }} </div>
           </div>
           <div class="column">
             <div> SPA </div>
-            <div> {{ stats.spa }} </div>
+            <div> {{ pokemon.stats.spa }} </div>
           </div>
           <div class="column">
             <div> DEF </div>
-            <div> {{ stats.def }} </div>
+            <div> {{ pokemon.stats.def }} </div>
           </div>
           <div class="column">
             <div> SPD </div>
-            <div> {{ stats.spd }} </div>
+            <div> {{ pokemon.stats.spd }} </div>
           </div>
           <div class="column">
             <div> SPE </div>
-            <div> {{ stats.spe }} </div>
+            <div> {{ pokemon.stats.spe }} </div>
           </div>
         </div>
       </li>
@@ -73,7 +73,7 @@
 <script>
 export default {
     name: 'PokemonCard',
-    props: ["name", "index", "type", "sprite", "stats"],
+    props: ["pokemon"],
 
     data () {
       return {
